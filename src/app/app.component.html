@@ -1,20 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+
+<div style="text-align:center"> <!--headline-->
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="card"> <!--parsing and displayin the issues from the json to the page, issue byy issue-->
+    <ng-container *ngFor="let item of data.items">
+      <h5> <span class="headline">url:</span> {{ item.url }}</h5>
+      <h5> <span class="headline">repository_url:</span> {{ item.repository_url }}</h5>
+      <h5> <span class="headline">labels_url:</span> {{ item.labels_url }}</h5>
+      <h5><span class="headline">comments_url:</span> {{ item.comments_url }}</h5>
+      <h5> <span class="headline">events_url:</span> {{ item.events_url }}</h5>
+      <h5><span class="headline">html_url:</span> {{ item.html_url }}</h5>
+      <h5><span class="headline">id:</span> {{ item.id }}</h5>
+      <h5><span class="headline">node_id:</span> {{ item.node_id }}</h5>
+      <h5><span class="headline">number:</span> {{ item.number }}</h5>
+      <h5><span class="headline">title:</span> {{ item.title }}</h5>
+      <h5><span class="headline">user:</span> {{ item.user  | json  : spacing}}</h5>
+      <h5><span class="headline">labels:</span> {{ item.labels | json  : spacing }}</h5>
+      <h5><span class="headline">state:</span> {{ item.state }}</h5>
+      <h5><span class="headline">locked:</span> {{ item.locked }}</h5>
+      <h5><span class="headline">assignee:</span> {{ item.assignee | json  : spacing}}</h5>
+      <h5><span class="headline">assignees:</span> {{ item.assignees | json  : spacing}}</h5>
+      <h5><span class="headline">milestone:</span> {{ item.milestone | json  : spacing }}</h5>
+      <h5><span class="headline">comments:</span>: {{ item.comments | json  : spacing}}</h5>
+      <h5><span class="headline">created_at:</span> {{ item.created_at }}</h5>
+      <h5><span class="headline">updated_at:</span> {{ item.updated_at | json  : spacing}}</h5>
+      <h5><span class="headline">closed_at:</span> {{ item.closed_at | json  : spacing}}</h5>
+      <h5><span class="headline">author_association:</span> {{ item.author_association }}</h5>
+      <h5><span class="headline">body:</span> {{ item.body | json  : spacing}}</h5>
+      <h5><span class="headline">score:</span> {{ item.score }}</h5>
+
+      <br>
+      <br>
+    </ng-container>
+  </div>

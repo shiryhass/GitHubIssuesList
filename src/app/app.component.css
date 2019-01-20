@@ -1,0 +1,17 @@
+/* Application-wide Styles */
+
+h1 {     /* Headline style */
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+.card {  /* The issues data style */
+  color: rgb(12, 12, 12);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90%;
+}
+
+span.headline {  /* Type of data headline style (for example url:, id:, user:)*/
+  font-size: 100%;
+  color:  rgb(255, 0, 76);
+}
